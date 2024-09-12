@@ -9,6 +9,8 @@ Odin Library is a simple book management application that allows users to add, d
 - Delete existing books
 - Toggle read status of books (read/unread)
 - Responsive design for various screen sizes
+- Refactor code using JavaScript classes
+- Implement local storage to save user's book data
 
 ## Review
 
@@ -17,13 +19,8 @@ Skills used:
 - HTML Form
 - Flexbox and Grid layouts
 - JavaScript DOM manipulation
-- Object Constructors
-
-## Future Improvements
-
-- Refactor code using JavaScript classes
-- Implement local storage to save user's book data
+- JavaScript classes
 
 ## Acknowledgments
 
-This is the practice from [The Odin Project]('https://www.theodinproject.com/lessons/node-path-javascript-library#project-solution')
+This is the practice from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library#project-solution)
