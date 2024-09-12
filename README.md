@@ -24,6 +24,8 @@ Skills used:
 - Refactor code using JavaScript classes
 - Implement local storage to save user's book data
 
+(Improvents were done in the branch: library-cls, here it leaves the origin code for record.)
+
 ## Acknowledgments
 
-This is the practice from [The Odin Project]('https://www.theodinproject.com/lessons/node-path-javascript-library#project-solution')
+This is the practice from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library#project-solution)
