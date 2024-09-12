@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mask"></div>
+    <header>
+      <nav>
+        <h1><span>Odin</span> Library</h1>
+        <button
+          class="addBookBtn"
+          id="addBookBtn"
+          aria-label="Add new book"
+          type="button"
+        >
+          NEW BOOK
+        </button>
+      </nav>
+    </header>
+    <main class="book-list-container">
+      <h2>My Books</h2>
+      <section class="book-container">
+        <!-- Book Card -->
+      </section>
+    </main>
+
+    <!-- Book information dialog -->
+    <dialog id="book-dialog">
+      <form method="dialog">
+        <h2>Add New Book</h2>
+        <div></div>
+        <input
+          type="text"
+          id="bookTitle"
+          name="bookTitle"
+          placeholder="Title"
+          required
+        />
+
+        <input
+          type="text"
+          id="bookAuthor"
+          name="bookAuthor"
+          placeholder="Author"
+          required
+        />
+
+        <input
+          type="number"
+          id="bookPages"
+          name="bookPages"
+          placeholder="Pages"
+          required
+        />
+        <div class="is-read">
+          <label for="bookStatus">Have you read it?</label>
+          <input type="checkbox" id="bookStatus" name="bookStatus" />
+        </div>
+
+        <div class="dialog-buttons">
+          <button type="button" id="cancelBtn">Cancel</button>
+          <button type="submit" id="submitBtn">Add Book</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

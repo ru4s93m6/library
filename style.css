@@ -1,0 +1,186 @@
+:root {
+  --theme-color: #e3b261;
+  --cancel-color: #737373;
+  --button-color: rgb(48, 82, 176);
+  --success-color: rgb(81, 188, 126);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.mask {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+header {
+  padding: 1.25rem 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
+  border-radius: 0 0 3px 3px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: clamp(1.75rem, 2.725vw + 1.5rem, 3.2rem);
+}
+
+nav h1 span {
+  color: var(--theme-color);
+}
+
+.book-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+  justify-content: space-around;
+}
+
+.addBookBtn,
+.book-actions button,
+.dialog-buttons button {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  height: 36px;
+  line-height: 36px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#cancelBtn {
+  background-color: var(--cancel-color);
+}
+
+.dialog-buttons button[type="submit"] {
+  background-color: var(--theme-color);
+  color: black;
+  font-weight: 700;
+}
+
+.book-actions button.delete-btn {
+  background-color: var(--cancel-color);
+}
+
+.book-actions button.toggle-read-btn {
+  background-color: var(--button-color);
+}
+
+button.toggle-read-btn.read {
+  background-color: var(--success-color);
+}
+
+.book-list-container {
+  padding: 5%;
+}
+
+.book-container h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.book-container {
+  margin-top: 3ch;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: min-content;
+  justify-content: center;
+  align-content: start;
+  gap: 1rem;
+}
+
+.book-card {
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
+  padding: 1.25rem 2.4rem;
+  border-radius: 0.5rem;
+  min-height: 300px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.2;
+}
+
+.book-card p {
+  margin: 2ch 0;
+}
+
+/* dialog */
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 1rem;
+  background-color: gainsboro;
+  padding: 40px;
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2ch;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  accent-color: white;
+}
+
+label[for="bookStatus"],
+[type="checkbox"] {
+  display: inline-block;
+}
+
+.dialog-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5ch;
+}
+
+@media (max-width: 500px) {
+  .book-container {
+    justify-items: center;
+  }
+  .book-card {
+    width: 300px;
+  }
+}
